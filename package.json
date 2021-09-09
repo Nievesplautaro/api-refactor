@@ -1,0 +1,28 @@
+{
+  "name": "microservices",
+  "version": "1.0.0",
+  "description": "Api refactored to Microservices",
+  "main": "server.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "test": "cross-env NODE_ENV=test PORT=1234 jest --verbose --maxWorkers=1",
+    "test:watch": "npm run test -- --watch"
+  },
+  "author": "Lautaro Nieves Perri",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.5",
+    "mongoose-unique-validator": "^2.0.3"
+  },
+  "devDependencies": {
+    "jest": "^27.1.1",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  }
+}
